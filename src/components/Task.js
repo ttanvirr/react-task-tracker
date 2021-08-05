@@ -1,9 +1,14 @@
+import { FaTimes } from "react-icons/fa";
+
 const Task = ({task}) => {
-    console.log(task);
+
     return (
-        <div>
-            <h3>{task.task}</h3>
-            <h4>{task.date}</h4>
+        <div className={`task ${task.reminder ? "reminder" : ""}`}>
+            <div>
+                <h3>{task.task}</h3>
+                <p>{task.date} </p>
+            </div>
+            <FaTimes style={{color:"red", cursor:"pointer"}} />
         </div>
     )
 }

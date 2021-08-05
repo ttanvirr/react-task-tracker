@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap');
+
 * {
     box-sizing: border-box;
 }
 
 body {
     font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul {
     margin: 0;
     padding: 0;
 }
@@ -29,4 +36,23 @@ body {
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
+}
+
+.tasks {
+    margin: 20px 0;
+}
+
+.task {
+    background-color:whitesmoke;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: default;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.reminder {
+    border-left: 5px solid green;
 }
