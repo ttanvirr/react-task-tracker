@@ -25,10 +25,27 @@ function App() {
         }
       ]  
 );
+
+const deleteTask = id => {       /* id receives task.id from Task component */
+  setTasks( tasks.filter(task => task.id !== id) );
+}
+
+const toggleReminder = id => {
+  setTasks(
+    tasks.map( task => { 
+    return task.id === id ? {...task, reminder: !task.reminder} : task
+    })
+  )
+}
+
   return (
     <div className="container">
       <Header />
-      <Tasks tasks = {tasks} />
+      <Tasks 
+        tasks = {tasks} 
+        deleteTask={deleteTask}
+        toggleReminder = {toggleReminder} 
+      />
     </div>
   );
 }
