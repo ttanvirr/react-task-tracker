@@ -1,4 +1,5 @@
 import { useState } from "react";
+import AddForm from "./components/AddForm";
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 
@@ -38,9 +39,16 @@ const toggleReminder = id => {
   )
 }
 
+const onAdd = task => {      // task receives an object from AddForm component
+  const id = tasks.length + 1;
+  const newTask = {id, ...task};
+  setTasks([...tasks, newTask]);
+}
+
   return (
     <div className="container">
       <Header />
+      <AddForm onAdd={onAdd} />
       <Tasks 
         tasks = {tasks} 
         deleteTask={deleteTask}
