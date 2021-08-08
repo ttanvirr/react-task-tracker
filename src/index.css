@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
     display: block;
 }
 
-.tasks {
+.tasks, .no-tasks {
     margin: 20px 0;
 }
 
@@ -99,4 +99,11 @@ h1, h2, h3, h4, h5, h6, p, ul {
 .form-control-check input {
     flex: 2;
     height: 20px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
