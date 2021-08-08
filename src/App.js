@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 
 function App() {
+  const [showForm, setForm] = useState(false);
   const [tasks, setTasks] = useState (
     [
         {
@@ -47,9 +48,9 @@ const onAdd = task => {      // task receives an object from AddForm component
 
   return (
     <div className="container">
-      <Header />
-      <AddForm onAdd={onAdd} />
-      <Tasks 
+      <Header toggleForm={()=>setForm(!showForm)} toggleAddBtn={showForm} />
+      {showForm && <AddForm onAdd={onAdd} />}
+      <Tasks
         tasks = {tasks} 
         deleteTask={deleteTask}
         toggleReminder = {toggleReminder} 
