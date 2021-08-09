@@ -1,0 +1,22 @@
+{
+  "tasks": [
+    {
+      "task": "Business Meeting",
+      "date": "Wednesday, 11 August, 2021",
+      "reminder": true,
+      "id": 1
+    },
+    {
+      "task": "Visit a Doctor",
+      "date": "Wednesday, 11 August, 2021",
+      "reminder": false,
+      "id": 2
+    },
+    {
+      "task": "Family Program",
+      "date": "Friday, 13 August, 2021",
+      "reminder": false,
+      "id": 3
+    }
+  ]
+}
